@@ -144,7 +144,7 @@ class DiagnosisClient:
             raise ValueError("selectedSymptoms can not be empty")
         
         serializedSymptoms = json.dumps(selectedSymptoms)
-        action = "diagnosis/specialisations?symptoms={0}&gender={1}&year_of_birth={2}".format(serializedSymptoms, gender.name, yearOfBirth)
+        action = "diagnosis/specialisations?symptoms={0}&gender={1}&year_of_birth={2}".format(serializedSymptoms, gender, yearOfBirth)
         return self._loadFromWebService(action)
     
 
